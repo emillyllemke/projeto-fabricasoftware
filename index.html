@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskBoard</title>
+    <link rel="icon" href="images/favicon.ico" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-container">
+        <h1 class="logo"><img src="images/favicon.ico" class="logo" alt="Logo">TaskBoard</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <p>Gerencie seu dia da melhor maneira!</p>
+            <button class="btn-novo">+ Nova Tarefa</button>
+        </section>
+        <section class="tasks-wrapper">
+            <div class="tasks-section">
+                <h2>Tarefas Pendentes</h2>
+                <div id="pending-tasks" class="task-container"></div>
+            </div>
+            <div class="tasks-section">
+                <h2>Tarefas Concluídas</h2>
+                <div id="done-tasks" class="task-container"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p> ®2026 TaskBoard - Emilly Laís Lemke</p>
+    </footer>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <h3>Criar Nova Tarefa</h3>
+            <form class="task-form">
+                <div class="form-top">
+                    <div class="form-left">
+                        <label for="titulo">Título</label>
+                        <input type="text" id="titulo" placeholder="Informe o título dessa tarefa" required>
+                    </div>
+                    <div class="form-right">
+                        <label for="data">Data</label>
+                        <input type="date" id="data" placeholder="dd/mm/aaaa">
+                    </div>
+                </div>
+                <div class="form-bottom">
+                        <label for="descricao">Descrição</label>
+                        <input type="text" id="descricao" placeholder="Descreva essa tarefa" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancelar">Cancelar</button>
+                    <button type="submit" class="btn-criar">Criar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
